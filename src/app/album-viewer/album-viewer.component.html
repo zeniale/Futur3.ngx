@@ -1,3 +1,12 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a [routerLink]="homeLink">Lista Album</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Album {{albumId}}</li>
+  </ol>
+</nav>
+
 <div class="container">
   <div class="row">
     <div class="col-3 photo-container text-center" *ngFor="let photo of photos | async">

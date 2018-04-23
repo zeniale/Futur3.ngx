@@ -1,4 +1,12 @@
-<ul class="list-group">
-  <li class="list-group-item text-center" *ngFor="let album of albums | async"> <i class="far fa-images"></i> <a [routerLink]="album.link">{{album.title}}</a></li>
-</ul>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Lista Album</li>
+  </ol>
+</nav>
 
+<ul class="list-group list-bounds">
+  <li class="list-group-item text-center" *ngFor="let album of albums | async">
+    <i class="far fa-images"></i>
+    <a [routerLink]="album.link">{{album.title}}</a>
+  </li>
+</ul>

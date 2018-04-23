@@ -17,6 +17,8 @@ import { AlbumViewerService } from './album-viewer.service';
 export class AlbumViewerComponent implements OnInit {
 
   public photos: Observable<Array<Photo>>;
+  public homeLink = `/${Routings.albums}`;
+  public albumId: number;
   constructor(
     private route: ActivatedRoute,
     private albumViewerService: AlbumViewerService
@@ -26,7 +28,8 @@ export class AlbumViewerComponent implements OnInit {
     this.route.params
       .take(1)
       .subscribe((params: Params) => {
-        this.photos = this.albumViewerService.readPhotosData(+params[Routings.albumId])
+        this.albumId = +params[Routings.albumId];
+        this.photos = this.albumViewerService.readPhotosData(this.albumId)
           .map((photos: Array<Photo>) => {
             photos.forEach((photo: Photo) => photo.link = `/${Routings.photo}/${photo.id}`);
             return photos;
