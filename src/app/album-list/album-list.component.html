@@ -1,7 +1,4 @@
-<p>
-  album-list works!
-</p>
+<ul class="list-group">
+  <li class="list-group-item text-center" *ngFor="let album of albums | async"> <i class="far fa-images"></i> <a [routerLink]="album.link">{{album.title}}</a></li>
+</ul>
 
-<div *ngFor="let album of albums | async">
-  {{album.title}}
-</div>

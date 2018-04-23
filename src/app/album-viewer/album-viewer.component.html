@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3 photo-container text-center" *ngFor="let photo of photos | async">
+      <div class="card">
+        <img class="card-img-top photo" [src]="photo.thumbnailUrl" [alt]="photo.title">
+        <div class="card-body">
+          <h5 class="card-title photo-title">{{photo.title}}</h5>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

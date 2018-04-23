@@ -8,6 +8,10 @@ const appRoutes: Routes = [
         loadChildren: 'app/album-list/album-list.module#AlbumListModule'
     },
     {
+        path: Routings.album,
+        loadChildren: 'app/album-viewer/album-viewer.module#AlbumViewerModule'
+    },
+    {
         path: '',
         redirectTo: Routings.albums,
         pathMatch: 'full'
