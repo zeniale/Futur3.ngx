@@ -1,5 +1,5 @@
 export class ApiUrls {
-    static albumsUrl = 'http://jsonplaceholder.typicode.com/albums';
-    static photosUrl = 'http://jsonplaceholder.typicode.com/photos?albumId=';
-    static photoUrl = 'http://jsonplaceholder.typicode.com/photos/';
+    static albumsUrl = 'https://jsonplaceholder.typicode.com/albums';
+    static photosUrl = 'https://jsonplaceholder.typicode.com/photos?albumId=';
+    static photoUrl = 'https://jsonplaceholder.typicode.com/photos/';
 }
