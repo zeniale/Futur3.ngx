@@ -1,0 +1,12 @@
+<div class="container text-center container-bounds">
+    <div class="row">
+      <div class="col-12 photo-container text-center">
+        <div class="card">
+          <img class="card-img-top photo" [src]="(photo | async)?.url" [alt]="(photo | async)?.title">
+          <div class="card-body">
+            <h5 class="card-title photo-title">{{(photo | async)?.title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

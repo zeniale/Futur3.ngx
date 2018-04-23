@@ -11,4 +11,5 @@ export class Photo {
     title: number;
     url: string;
     thumbnailUrl: string;
+    link: string;
 }

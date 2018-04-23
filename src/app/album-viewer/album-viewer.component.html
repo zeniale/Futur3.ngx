@@ -5,7 +5,7 @@
         <img class="card-img-top photo" [src]="photo.thumbnailUrl" [alt]="photo.title">
         <div class="card-body">
           <h5 class="card-title photo-title">{{photo.title}}</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a [routerLink]="photo.link" class="btn btn-primary">Vedi immagine</a>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
 import { Observable } from 'rxjs/Observable';
 
@@ -25,7 +26,11 @@ export class AlbumViewerComponent implements OnInit {
     this.route.params
       .take(1)
       .subscribe((params: Params) => {
-        this.photos = this.albumViewerService.readAlbumsData(+params[Routings.albumId]);
+        this.photos = this.albumViewerService.readPhotosData(+params[Routings.albumId])
+          .map((photos: Array<Photo>) => {
+            photos.forEach((photo: Photo) => photo.link = `/${Routings.photo}/${photo.id}`);
+            return photos;
+          });
       });
   }
 

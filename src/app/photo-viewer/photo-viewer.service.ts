@@ -7,12 +7,12 @@ import { Photo } from '../shared/models';
 import { ApiUrls } from '../shared/api-urls';
 
 @Injectable()
-export class AlbumViewerService {
+export class PhotoViewerService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public readPhotosData(albumId: number): Observable<Array<Photo>> {
-    return this.httpClient.get<Array<Photo>>(`${ApiUrls.photosUrl}${albumId}`);
+  public readPhotoData(photoId: number): Observable<Photo> {
+    return this.httpClient.get<Photo>(`${ApiUrls.photoUrl}${photoId}`);
   }
 
 }
