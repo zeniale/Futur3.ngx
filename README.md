@@ -1,27 +1,12 @@
 # Futur3.Ngx
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Progetto di test livello base.
 
-## Development server
+Il progetto è sviluppato utilizzando il Framework [Angular](http://angular.io)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Per eseguire il progetto eseguire i seguenti step:
+- E' necessario aver installato node.js e npm
+- eseguire il comando NPM `npm i -g @angular/cli`
+- all'interno della folder del progettto eseguire il comando `npm i`
+- lanciare l'applicativo mediante il comando `ng s`
+- l'applicativo è quindi raggiungibile all'indirizzo http://localhost:4200
