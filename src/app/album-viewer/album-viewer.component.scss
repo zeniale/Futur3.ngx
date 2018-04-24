@@ -1,0 +1,11 @@
+.photo-container{
+    margin-bottom: .5rem;
+    .photo{
+        padding: .5rem;
+    }
+    .photo-title{
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

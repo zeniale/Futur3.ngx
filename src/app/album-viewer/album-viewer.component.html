@@ -1,0 +1,22 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a [routerLink]="homeLink">Lista Album</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Album {{albumId}}</li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 photo-container text-center" *ngFor="let photo of photos | async">
+      <div class="card">
+        <img class="card-img-top photo" [src]="photo.thumbnailUrl" [alt]="photo.title">
+        <div class="card-body">
+          <h5 class="card-title photo-title">{{photo.title}}</h5>
+          <a [routerLink]="photo.link" class="btn btn-primary">Vedi immagine</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
