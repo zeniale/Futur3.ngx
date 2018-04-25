@@ -13,3 +13,13 @@ export class Photo {
     thumbnailUrl: string;
     link: string;
 }
+
+export class AlbumPreview {
+    albumId: number;
+    name: string;
+    webSite: string;
+    city: string;
+    lat: string;
+    lng: string;
+    photoCount: number;
+}
