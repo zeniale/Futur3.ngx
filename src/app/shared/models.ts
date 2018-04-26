@@ -12,7 +12,6 @@ export class AlbumPreviewDto {
     mapLink: string;
 }
 
-
 export class PhotoPreviewDto {
     externalId: number;
     title: number;
