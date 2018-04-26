@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 import { AlbumViewerService } from './album-viewer.service';
 import { AlbumViewerComponent } from './album-viewer.component';
 import { AlbumViewerRoutingModule } from './album-viewer-routing.module';
@@ -10,7 +12,8 @@ import { AlbumViewerRoutingModule } from './album-viewer-routing.module';
   imports: [
     CommonModule,
     HttpClientModule,
-    AlbumViewerRoutingModule
+    AlbumViewerRoutingModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     AlbumViewerService

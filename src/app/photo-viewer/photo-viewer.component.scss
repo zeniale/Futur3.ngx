@@ -2,3 +2,10 @@
     max-width: 37.5rem;
     padding-top: 1rem;
 }
+
+.like-box{
+    float: right;
+    .pointer{
+        cursor: pointer;
+    }
+}

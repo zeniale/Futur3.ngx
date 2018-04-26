@@ -1,22 +1,25 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-      <a [routerLink]="homeLink">Lista Album</a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">Album {{albumId}}</li>
-  </ol>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a [routerLink]="homeLink">Lista Album</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Album {{albumId}}</li>
+    </ol>
 </nav>
 
 <div class="container">
-  <div class="row">
-    <div class="col-3 photo-container text-center" *ngFor="let photo of photos | async">
-      <div class="card">
-        <img class="card-img-top photo" [src]="photo.thumbnailUrl" [alt]="photo.title">
-        <div class="card-body">
-          <h5 class="card-title photo-title">{{photo.title}}</h5>
-          <a [routerLink]="photo.link" class="btn btn-primary">Vedi immagine</a>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 photo-container text-center" *ngFor="let photo of photos | async">
+            <div class="card">
+                <a [routerLink]="photo.link">
+                    <img class="card-img-top photo" [src]="photo.thumbnailUrl" [alt]="photo.title">
+                </a>
+                <span class="photo-likes" *ngIf="photo.likes>0">
+                    <fa name="far fa-thumbs-up"></fa> ({{photo.likes}})</span>
+                <div class="card-body">
+                    <h5 class="card-title photo-title">{{photo.title}}</h5>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

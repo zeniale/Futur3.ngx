@@ -3,16 +3,16 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 
-import { Photo } from '../shared/models';
 import { ApiUrls } from '../shared/api-urls';
+import { PhotoPreviewDto } from '../shared/models';
 
 @Injectable()
 export class AlbumViewerService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public readPhotosData(albumId: number): Observable<Array<Photo>> {
-    return this.httpClient.get<Array<Photo>>(`${ApiUrls.photosUrl}${albumId}`);
+  public readPhotosData(albumId: number): Observable<Array<PhotoPreviewDto>> {
+    return this.httpClient.get<Array<PhotoPreviewDto>>(`${ApiUrls.photosUrl}${albumId}`);
   }
 
 }

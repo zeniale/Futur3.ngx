@@ -1,12 +1,35 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Lista Album</li>
-  </ol>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Lista Album</li>
+    </ol>
 </nav>
 
-<ul class="list-group list-bounds">
-  <li class="list-group-item text-center" *ngFor="let album of albums | async">
-    <i class="far fa-images"></i>
-    <a [routerLink]="album.link">{{album.title}}</a>
-  </li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let album of albums | async" class="col-xl-4 col-lg-6 col-md-6 col-12">
+            <div class="card preview-bounds">
+                <div class="card-header">
+                    {{album.title}}
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <a [routerLink]="album.link">
+                                <img [src]="album.randomThumbnailUrl">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <strong>{{album.photoCount}}</strong> foto
+                            <p>scattate da</p>
+                            <p>
+                                <a [attr.href]="album.webSite" target="_blank">{{album.name}},</a>
+                                <br>
+                                <a [attr.href]="album.mapLink" target="_blank">{{album.city}}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
