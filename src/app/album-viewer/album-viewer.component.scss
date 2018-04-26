@@ -3,6 +3,11 @@
     .photo{
         padding: .5rem;
     }
+    .photo-likes{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
     .photo-title{
         white-space: nowrap; 
         overflow: hidden;

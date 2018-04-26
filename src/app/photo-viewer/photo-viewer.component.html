@@ -2,21 +2,24 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a [routerLink]="homeLink">Lista Album</a>
-          </li>
-          <li class="breadcrumb-item" aria-current="page"><a [routerLink]="albumLink">Album {{albumId}}</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Foto {{photoId}}</li>
+        </li>
+        <li class="breadcrumb-item" aria-current="page">
+            <a [routerLink]="albumLink">Album {{albumId}}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Foto {{photoId}}</li>
     </ol>
-  </nav>
+</nav>
 
 <div class="container text-center container-bounds">
     <div class="row">
-      <div class="col-12 photo-container text-center">
-        <div class="card">
-          <img class="card-img-top photo" [src]="(photo | async)?.url" [alt]="(photo | async)?.title">
-          <div class="card-body">
-            <h5 class="card-title photo-title">{{(photo | async)?.title}}</h5>
-          </div>
+        <div class="col-12 photo-container text-center">
+            <div class="card">
+                <img class="card-img-top photo" [src]="(photo | async)?.url" [alt]="(photo | async)?.title">
+                <div class="card-body">
+                    <h5 class="card-title photo-title">{{(photo | async)?.title}} <span class="like-box" (click)="increaseLikes()"><fa name="far fa-thumbs-up" class="pointer"></fa> ({{likes}})</span></h5>
+                    
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>

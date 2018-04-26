@@ -1,20 +1,4 @@
-export class Album {
-    id: number;
-    userId: number;
-    title: string;
-    link: string;
-}
-
-export class Photo {
-    id: number;
-    albumId: number;
-    title: number;
-    url: string;
-    thumbnailUrl: string;
-    link: string;
-}
-
-export class AlbumPreview {
+export class AlbumPreviewDto {
     albumId: number;
     name: string;
     webSite: string;
@@ -22,4 +6,25 @@ export class AlbumPreview {
     lat: string;
     lng: string;
     photoCount: number;
+    randomThumbnailUrl: string;
+
+    link: string;
+    mapLink: string;
+}
+
+
+export class PhotoPreviewDto {
+    externalId: number;
+    title: number;
+    thumbnailUrl: string;
+    likes: number;
+
+    link: string;
+}
+
+export class PhotoDto {
+    title: string;
+    url: string;
+    albumId: number;
+    likes: number;
 }
